@@ -1,0 +1,60 @@
+{
+  "name": "minimumboundingsquare",
+  "version": "1.0.0",
+  "description": "minimum bounding square distance",
+  "author": "Frank",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/"
+  },
+  "homepage": "https://github.com/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/x.git"
+  },
+  "keywords": [
+    "gis",
+    "geojson"
+  ],
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "bench": "node bench.js",
+    "test": "node test.js",
+    "test:tape": "node test.js",
+    "prepare": "husky install",
+    "lint": "eslint --ext .js --ignore-path .gitignore ."
+  },
+  "lint-staged": {
+    "**/*.{js,ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "benchmark": "*",
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.1",
+    "npm-run-all": "*",
+    "prettier": "^2.3.2",
+    "rollup": "*",
+    "tape": "*"
+  },
+  "dependencies": {
+    "@turf/area": "^6.5.0",
+    "@turf/bbox": "^6.5.0",
+    "@turf/center": "^6.5.0",
+    "@turf/destination": "^6.5.0",
+    "@turf/distance": "^6.5.0",
+    "@turf/helpers": "^6.5.0"
+  }
+}
